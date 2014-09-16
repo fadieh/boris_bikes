@@ -29,4 +29,11 @@ class DockingStation
 		@bikes << bike
 	end
 
+	def station
+	end
+
+	def available_bikes
+		@bikes.reject {|bike| bike.broken? }
+	end
+
 end
