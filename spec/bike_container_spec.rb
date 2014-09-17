@@ -9,7 +9,7 @@ describe BikeContainer do
 	let(:holder) { ContainerHolder.new }
 
 	def fill_station(holder)
-		10.times { holder.dock(Bike.new) }
+		holder.capacity.times { holder.dock(Bike.new) }
 	end
 
 	it "should accept a bike" do
